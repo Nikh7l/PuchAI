@@ -1,1 +1,1 @@
-web: gunicorn digital-nagrik-mitra-mcp.mcp_server:app --bind 0.0.0.0:$PORT --timeout 120
+web: gunicorn digital_nagrik_mitra_mcp.mcp_server:app --bind 0.0.0.0:$PORT --timeout 120
