@@ -113,6 +113,10 @@ async def main():
     print("🚀 Starting MCP server on http://0.0.0.0:8086")
     await mcp.run_async("streamable-http", host="0.0.0.0", port=8086)
 
+# Create FastAPI app for Gunicorn
+app = mcp.app
+
 if __name__ == "__main__":
+    import uvicorn
     print("Starting Digital Nagrik Mitra MCP Server...")
-    asyncio.run(main())
+    uvicorn.run("mcp_server:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8087)), reload=True)
