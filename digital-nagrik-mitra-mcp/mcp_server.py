@@ -1,15 +1,55 @@
 import asyncio
-import os
 import json
-from typing import Annotated, Optional
-from dotenv import load_dotenv
+import os
+import logging
+import functools
+import traceback
+from datetime import datetime
+from typing import Annotated, Optional, Any, Callable, TypeVar, cast
 
 from fastmcp import FastMCP
 from fastmcp.server.auth.providers.bearer import BearerAuthProvider, RSAKeyPair
+from mcp import ErrorData, McpError
 from mcp.server.auth.provider import AccessToken
-from pydantic import Field
+from mcp.types import TextContent, INVALID_PARAMS, INTERNAL_ERROR
+from pydantic import Field, BaseModel
+
+# --- Logging Configuration ---
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler('nagrik_mitra.log')
+    ]
+)
+logger = logging.getLogger('nagrik_mitra')
+
+# Type variable for function decorators
+F = TypeVar('F', bound=Callable[..., Any])
+
+def log_errors(func: F) -> F:
+    """Decorator to log errors and return user-friendly messages."""
+    @functools.wraps(func)
+    async def wrapper(*args, **kwargs):
+        try:
+            logger.info(f"Calling {func.__name__} with args={args}, kwargs={kwargs}")
+            result = await func(*args, **kwargs)
+            logger.info(f"{func.__name__} completed successfully")
+            return result
+        except McpError as e:
+            error_msg = f"McpError in {func.__name__}: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            return f"❌ {error_msg}"
+        except Exception as e:
+            error_msg = f"Unexpected error in {func.__name__}: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            return "❌ An unexpected error occurred. Please try again later."
+    return cast(F, wrapper)
 
 # --- Load environment variables ---
+from dotenv import load_dotenv
+
 load_dotenv()
 
 TOKEN = os.environ.get("AUTH_TOKEN")
@@ -18,17 +58,11 @@ MY_NUMBER = os.environ.get("MY_NUMBER")
 assert TOKEN, "Please set AUTH_TOKEN in your .env file"
 assert MY_NUMBER, "Please set MY_NUMBER in your .env file"
 
-
 # --- Auth Provider ---
 class SimpleBearerAuthProvider(BearerAuthProvider):
     def __init__(self, token: str):
         k = RSAKeyPair.generate()
-        super().__init__(
-            public_key=k.public_key,
-            jwks_uri=None,
-            issuer=None,
-            audience=None
-        )
+        super().__init__(public_key=k.public_key, jwks_uri=None, issuer=None, audience=None)
         self.token = token
 
     async def load_access_token(self, token: str) -> AccessToken | None:
@@ -41,20 +75,28 @@ class SimpleBearerAuthProvider(BearerAuthProvider):
             )
         return None
 
-
-# --- Data Loading Utility ---
+# --- Data Loading Utilities ---
 def load_data(filename: str):
-    """
-    Loads JSON data from the 'data' directory.
-    Returns an empty list if file not found or invalid JSON.
-    """
-    path = os.path.join("data", filename)
+    """Load JSON data from the data directory with error handling."""
     try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
-
+        filepath = os.path.join("data", filename)
+        logger.debug(f"Loading data from {filepath}")
+        with open(filepath, "r", encoding='utf-8') as f:
+            data = json.load(f)
+        logger.debug(f"Successfully loaded data from {filepath}")
+        return data
+    except FileNotFoundError:
+        error_msg = f"Data file not found: {filename}"
+        logger.error(error_msg)
+        raise McpError(ErrorData(code=INVALID_PARAMS, message=error_msg))
+    except json.JSONDecodeError as e:
+        error_msg = f"Invalid JSON in {filename}: {str(e)}"
+        logger.error(error_msg)
+        raise McpError(ErrorData(code=INTERNAL_ERROR, message=error_msg))
+    except Exception as e:
+        error_msg = f"Error loading {filename}: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        raise McpError(ErrorData(code=INTERNAL_ERROR, message=error_msg))
 
 # --- MCP Server Setup ---
 mcp = FastMCP(
@@ -62,115 +104,170 @@ mcp = FastMCP(
     auth=SimpleBearerAuthProvider(TOKEN),
 )
 
-
 # --- Tool: validate (required by Puch) ---
 @mcp.tool
+@log_errors
 async def validate() -> str:
-    """Validation endpoint for Puch integration."""
+    """Validate the MCP server connection."""
+    logger.info("Validation request received")
     return MY_NUMBER
-
 
 # --- Tool: /seva ---
 @mcp.tool
-async def seva(
-    service_name: Annotated[str, Field(description='The government service name. e.g., "Passport", "PAN Card"')]
-) -> str:
+@log_errors
+async def seva(service_name: Annotated[str, Field(description='The name of the government service you need information about. e.g., \"Passport\", \"PAN Card\"')]) -> str:
     """
-    Provides step-by-step guides for Indian government services.
+    Provides step-by-step guides for various Indian government services.
+    
+    Args:
+        service_name: Name of the government service (e.g., "Passport", "PAN Card")
+        
+    Returns:
+        str: Formatted guide for the requested service
     """
-    services = load_data("services.json")
-    service_info = next(
-        (s for s in services if s['name'].lower() == service_name.lower()),
-        None
-    )
+    logger.info(f"Processing request for service: {service_name}")
+    
+    try:
+        services = load_data("services.json")
+        logger.debug(f"Loaded {len(services)} services from data")
+        
+        service_info = next((s for s in services if s['name'].lower() == service_name.lower()), None)
 
-    if not service_info:
-        available_services = ", ".join(s['name'] for s in services)
-        return (
-            f"❌ Sorry, I don't have information on '{service_name}'.\n"
-            f"📋 Available services are: {available_services}."
-        )
+        if not service_info:
+            available_services = ", ".join([s['name'] for s in services])
+            error_msg = f"Service not found: {service_name}"
+            logger.warning(f"{error_msg}. Available services: {available_services}")
+            return f"❌ {error_msg}. Available services are: {available_services}."
 
-    response = f"📜 **Guide for {service_info['name']}**\n\n"
-
-    if service_info.get('procedure'):
-        response += "📝 **Procedure:**\n"
-        for i, step in enumerate(service_info['procedure'], 1):
+        logger.info(f"Found service: {service_info['name']}")
+        
+        response = f"📜 *Guide for {service_info['name']}*\n\n"
+        response += "📝 *Procedure:*\n"
+        for i, step in enumerate(service_info.get('procedure', []), 1):
             response += f"{i}. {step}\n"
-
-    if service_info.get('documents_required'):
-        response += "\n📄 **Documents Required:**\n"
-        for doc in service_info['documents_required']:
-            response += f"- {doc}\n"
-
-    if service_info.get('official_link'):
-        response += f"\n🔗 **Official Link:** {service_info['official_link']}"
-
-    return response
-
+        
+        if 'documents_required' in service_info and service_info['documents_required']:
+            response += "\n📄 *Documents Required:*\n"
+            for doc in service_info['documents_required']:
+                response += f"- {doc}\n"
+        
+        if 'official_link' in service_info and service_info['official_link']:
+            response += f"\n🔗 *Official Link:* {service_info['official_link']}"
+        
+        logger.debug(f"Successfully generated response for {service_name}")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Error in seva tool: {str(e)}", exc_info=True)
+        return f"❌ An error occurred while processing your request: {str(e)}"
 
 # --- Tool: /yojana ---
 @mcp.tool
-async def yojana(
-    query: Annotated[
-        Optional[str],
-        Field(description='Category or keyword for the scheme. e.g., "Education", "farmer", "pension"')
-    ]
-) -> str:
+@log_errors
+async def yojana(category: Annotated[Optional[str], Field(description='The category of scheme you are interested in. e.g., \"Education\", \"Health\"')]) -> str:
     """
-    Search for Indian government schemes by category or keyword.
-    - If no query, returns available categories.
-    - Supports multi-word partial matches in category, name, or description.
+    Helps you find and check eligibility for Indian government schemes.
+    
+    Args:
+        category: Category of schemes to list (optional)
+        
+    Returns:
+        str: List of schemes in the specified category or all categories if none specified
     """
-    schemes = load_data("schemes.json")
+    logger.info(f"Processing yojana request for category: {category or 'all'}")
+    
+    try:
+        schemes = load_data("schemes.json")
+        logger.debug(f"Loaded {len(schemes)} schemes from data")
+        
+        if not schemes:
+            logger.warning("No schemes found in the database")
+            return "❌ No schemes available at the moment. Please check back later."
+        
+        if not category:
+            all_categories = sorted(list(set(s.get('category', 'Uncategorized') for s in schemes)))
+            response = "🌟 *Available Scheme Categories:*\n"
+            for cat in all_categories:
+                response += f"- {cat}\n"
+            response += "\nTo see schemes in a category, use `/yojana [category_name]`."
+            return response
 
-    if not schemes:
-        return "⚠️ No scheme data found. Please check `schemes.json`."
+        # List schemes in the specified category
+        category_schemes = [s for s in schemes if s.get('category', '').lower() == category.lower()]
+        
+        if not category_schemes:
+            logger.warning(f"No schemes found in category: {category}")
+            response = "❌ No schemes found in the '{category}' category.\n\n"
+            response += "Available categories are:\n"
+            all_categories = sorted(list(set(s.get('category', 'Uncategorized') for s in schemes)))
+            for cat in all_categories:
+                response += f"- {cat}\n"
+            return response
 
-    if not query:
-        all_categories = sorted({s['category'] for s in schemes})
-        response = "🌟 **Available Scheme Categories:**\n"
-        response += "\n".join(f"- {cat}" for cat in all_categories)
-        response += "\n\n💡 Example: `/yojana farmer` or `/yojana Health`"
+        response = f"📚 *Schemes in {category}:*\n\n"
+        for scheme in category_schemes:
+            response += f"🔹 *{scheme.get('name', 'Unnamed Scheme')}*\n"
+            if 'description' in scheme:
+                response += f"{scheme['description']}\n"
+            if 'official_link' in scheme:
+                response += f"🔗 {scheme['official_link']}\n"
+            response += "\n"
+            
+        response += "\n*(Eligibility checker coming soon!)*"
+        logger.info(f"Successfully generated response for category: {category}")
         return response
+        
+    except Exception as e:
+        logger.error(f"Error in yojana tool: {str(e)}", exc_info=True)
+        return f"❌ An error occurred while processing your request: {str(e)}"
 
-    # Fuzzy search by keywords
-    query_words = query.lower().split()
-
-    def matches(scheme):
-        text = f"{scheme['category']} {scheme['name']} {scheme['description']}".lower()
-        return all(word in text for word in query_words)
-
-    matched_schemes = [s for s in schemes if matches(s)]
-
-    if not matched_schemes:
-        return f"❌ No schemes found matching '{query}'. Try another keyword or category."
-
-    response = f"📚 **Schemes matching '{query}':**\n"
-    for scheme in matched_schemes:
-        response += f"\n**{scheme['name']}** — {scheme['description']}"
-        response += f"\n_Category:_ {scheme['category']}"
-        if scheme.get('official_link'):
-            response += f"\n🔗 {scheme['official_link']}\n"
-
-    return response
-
+# --- Middleware for Request/Response Logging ---
+# @mcp.app.middleware("http")
+async def log_requests(request, call_next):
+    request_id = str(id(request))
+    logger.info(f"Request {request_id}: {request.method} {request.url}")
+    
+    try:
+        # Log request body if present
+        if request.method in ["POST", "PUT"]:
+            body = await request.body()
+            if body:
+                logger.debug(f"Request {request_id} body: {body.decode()}")
+        
+        # Process the request
+        response = await call_next(request)
+        
+        # Log successful response
+        logger.info(f"Response {request_id}: {response.status_code}")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Error processing request {request_id}: {str(e)}", exc_info=True)
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Internal server error"}
+        )
 
 # --- Run MCP Server ---
 async def main():
-    print("🚀 Starting MCP server on http://0.0.0.0:8086")
-    await mcp.run_async("streamable-http", host="0.0.0.0", port=8086)
-
-
-# Create FastAPI app for Gunicorn
-app = mcp.app
+    logger.info("🚀 Starting Digital Nagrik Mitra MCP Server...")
+    logger.info(f"Server will run on http://0.0.0.0:8086")
+    
+    try:
+        await mcp.run_async("streamable-http", host="0.0.0.0", port=8086)
+    except Exception as e:
+        logger.critical(f"Failed to start server: {str(e)}", exc_info=True)
+        raise
+    finally:
+        logger.info("Server shutdown complete")
 
 if __name__ == "__main__":
-    import uvicorn
-    print("🚀 Starting Digital Nagrik Mitra MCP Server...")
-    uvicorn.run(
-        "mcp_server:app",
-        host="0.0.0.0",
-        port=int(os.environ.get("PORT", 8087)),
-        reload=True
-    )
+    try:
+        print("Starting Digital Nagrik Mitra MCP Server...")
+        print("Logs are being written to 'nagrik_mitra.log'")
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Server stopped by user")
+    except Exception as e:
+        logger.critical(f"Fatal error: {str(e)}", exc_info=True)
+        raise
