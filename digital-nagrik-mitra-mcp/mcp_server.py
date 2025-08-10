@@ -209,9 +209,20 @@ async def yojana(category: Annotated[Optional[str], Field(description='The categ
             response += "\nTo see schemes in a category, use `/yojana [category_name]`."
             return response
 
-        # List schemes in the specified category
-        category_schemes = [s for s in schemes if s.get('category', '').lower() == category.lower()]
+        # List schemes in the specified category (flexible matching for special chars and whitespace)
+        def normalize_category(cat):
+            if not cat:
+                return ''
+            # Replace common variations and normalize whitespace
+            return ' '.join(str(cat).lower()
+                          .replace('&', 'and')
+                          .replace('  ', ' ')
+                          .strip()
+                          .split())
         
+        normalized_target = normalize_category(category)
+        category_schemes = [s for s in schemes 
+                          if normalize_category(s.get('category')) == normalized_target]
         if not category_schemes:
             logger.warning(f"No schemes found in category: {category}")
             response = "❌ No schemes found in the '{category}' category.\n\n"
