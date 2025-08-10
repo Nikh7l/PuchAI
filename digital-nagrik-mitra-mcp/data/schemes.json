@@ -1,7 +1,7 @@
 [
   {
     "name": "Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
-    "category": "Health, Sanitation & Nutrition",
+    "category": "Health, Sanitation and Nutrition",
     "description": "Provides a health cover of Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization.",
     "benefits": [
       "Cashless access to health care services.",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Post-Matric Scholarship for Students with Disabilities",
-    "category": "Education & Skill Development",
+    "category": "Education and Skill Development",
     "description": "Provides financial assistance to students with disabilities for post-matriculation courses enabling them to pursue higher education.",
     "benefits": [
       "Maintenance allowance.",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Atal Pension Yojana",
-    "category": "Financial Services & Social Security",
+    "category": "Financial Services and Social Security",
     "description": "A pension scheme mainly for the unorganized sector, providing a minimum guaranteed pension after the age of 60.",
     "benefits": [
       "Guaranteed minimum monthly pension of Rs. 1,000 to Rs. 5,000.",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
-    "category": "Housing & Infrastructure",
+    "category": "Housing and Infrastructure",
     "description": "Aims to provide pucca houses with basic amenities to all houseless households and households living in kutcha and dilapidated houses in rural areas.",
     "benefits": [
       "Assistance of Rs. 1.2 lakh in plain areas and Rs. 1.3 lakh in hilly areas.",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
-    "category": "Agriculture & Rural Welfare",
+    "category": "Agriculture and Rural Welfare",
     "description": "Provides income support to all landholding farmer families in the country to supplement their financial needs.",
     "benefits": [
       "Rs. 6,000 per year in three equal installments directly into the farmer's bank account.",
@@ -60,7 +60,7 @@
   },
   {
     "name": "National Social Assistance Programme (NSAP)",
-    "category": "Financial Services & Social Security",
+    "category": "Financial Services and Social Security",
     "description": "Provides financial assistance to the elderly, widows, and persons with disabilities in the form of social pensions.",
     "benefits": [
       "Old Age Pension: Rs. 200-500 per month depending on age group.",
@@ -72,7 +72,7 @@
   },
   {
     "name": "Stand-Up India Scheme",
-    "category": "Employment & Entrepreneurship",
+    "category": "Employment and Entrepreneurship",
     "description": "Facilitates bank loans between Rs. 10 lakh and Rs. 1 crore to at least one Scheduled Caste (SC) or Scheduled Tribe (ST) borrower and at least one woman borrower per bank branch for setting up a greenfield enterprise.",
     "benefits": [
       "Composite loan (inclusive of term loan and working capital).",
@@ -84,7 +84,7 @@
   },
   {
     "name": "Ayushman Bharat Health and Wellness Centres (AB-HWCs)",
-    "category": "Health, Sanitation & Nutrition",
+    "category": "Health, Sanitation and Nutrition",
     "description": "Transforms existing sub-health centres and primary health centres into health and wellness centres for comprehensive primary health care.",
     "benefits": [
       "Free essential drugs and diagnostic services.",
@@ -96,7 +96,7 @@
   },
   {
     "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
-    "category": "Agriculture & Rural Welfare",
+    "category": "Agriculture and Rural Welfare",
     "description": "A crop insurance scheme providing comprehensive insurance coverage and financial support to farmers in case of crop failure due to natural calamities, pests, and diseases.",
     "benefits": [
       "Low premium rates—2% for Kharif, 1.5% for Rabi, up to 5% for commercial and horticultural crops.",
@@ -108,7 +108,7 @@
   },
   {
     "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
-    "category": "Energy & Transport",
+    "category": "Energy and Transport",
     "description": "Empowers women from Below Poverty Line households by providing free LPG connections to reduce health hazards associated with traditional cooking fuels.",
     "benefits": [
       "Free LPG connection with financial support for deposit and installation.",
@@ -120,7 +120,7 @@
   },
   {
     "name": "Pradhan Mantri Awas Yojana – Urban (PMAY-U)",
-    "category": "Housing & Infrastructure",
+    "category": "Housing and Infrastructure",
     "description": "Enables affordable housing construction for urban poor via subsidies, credit-linked loans, and beneficiary-led construction or enhancement.",
     "benefits": [
       "Credit-linked subsidy up to 6.5% on home loans for EWS, LIG, MIG applicants.",
@@ -132,7 +132,7 @@
   },
   {
     "name": "Subhadra Yojana (Odisha)",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "Odisha state’s women-centric scheme providing direct financial support to economically weaker women aged 21–60 over five years.",
     "benefits": [
       "₹50,000 spread over five years via two ₹5,000 installments annually.",
@@ -144,7 +144,7 @@
   },
   {
     "name": "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)",
-    "category": "Employment & Entrepreneurship",
+    "category": "Employment and Entrepreneurship",
     "description": "Enhances livelihood security in rural areas by providing at least 100 days of guaranteed wage employment in a financial year to every household whose adult members volunteer to do unskilled manual work.",
     "benefits": [
       "Guaranteed 100 days of wage employment at a stipulated minimum wage.",
@@ -156,7 +156,7 @@
   },
   {
     "name": "Pradhan Mantri MUDRA Yojana (PMMY)",
-    "category": "Employment & Entrepreneurship",
+    "category": "Employment and Entrepreneurship",
     "description": "Provides loans up to Rs. 10 lakh to non-corporate, non-farm small/micro-enterprises through various financial institutions.",
     "benefits": [
       "Access to formal credit for small businesses, often without collateral.",
@@ -168,7 +168,7 @@
   },
   {
     "name": "Swachh Bharat Mission (SBM)",
-    "category": "Health, Sanitation & Nutrition",
+    "category": "Health, Sanitation and Nutrition",
     "description": "A nationwide campaign to eliminate open defecation and improve solid waste management in urban and rural areas.",
     "benefits": [
       "Financial incentives for constructing individual household latrines (IHHL).",
@@ -180,7 +180,7 @@
   },
   {
     "name": "National Health Mission (NHM)",
-    "category": "Health, Sanitation & Nutrition",
+    "category": "Health, Sanitation and Nutrition",
     "description": "Encompasses two sub-missions (Rural and Urban) to provide accessible, affordable, and quality healthcare to all citizens, especially the vulnerable.",
     "benefits": [
       "Strengthening of public health infrastructure (Sub-Centres, PHCs, CHCs).",
@@ -192,7 +192,7 @@
   },
   {
     "name": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
-    "category": "Education & Skill Development",
+    "category": "Education and Skill Development",
     "description": "A flagship skill certification scheme to enable a large number of Indian youth to take up industry-relevant skill training that will help them secure a better livelihood.",
     "benefits": [
       "Free short-duration skill training and certification based on National Skills Qualification Framework (NSQF).",
@@ -204,7 +204,7 @@
   },
   {
     "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
-    "category": "Employment & Entrepreneurship",
+    "category": "Employment and Entrepreneurship",
     "description": "Provides collateral-free working capital loans up to Rs. 10,000 (first tranche), Rs. 20,000 (second tranche), and Rs. 50,000 (third tranche) to street vendors to restart their businesses.",
     "benefits": [
       "Collateral-free loans up to Rs. 10,000 initially, then Rs. 20,000 and Rs. 50,000 in subsequent tranches.",
@@ -217,10 +217,10 @@
   },
   {
     "name": "PM Vishwakarma Scheme",
-    "category": "Education & Skill Development",
+    "category": "Education and Skill Development",
     "description": "Provides comprehensive support to traditional artisans and craftspeople engaged in 18 family-based traditional trades including training, credit, and modern tools.",
     "benefits": [
-      "PM Vishwakarma Certificate & ID Card for recognition.",
+      "PM Vishwakarma Certificate and ID Card for recognition.",
       "Basic training (40 hours) and advanced training (15 days) with Rs. 500/day stipend.",
       "Toolkit incentive up to Rs. 15,000 via e-vouchers.",
       "Collateral-free loans up to Rs. 1 lakh (first tranche) and Rs. 2 lakh (second tranche) at 5% interest.",
@@ -231,7 +231,7 @@
   },
   {
     "name": "PM MITRA (Mega Integrated Textile Regions and Apparel) Parks",
-    "category": "Employment & Entrepreneurship",
+    "category": "Employment and Entrepreneurship",
     "description": "Establishes integrated textile parks to create world-class industrial infrastructure for the textile industry, covering the entire value chain from spinning to garment manufacturing.",
     "benefits": [
       "Development capital support up to Rs. 500 crore per park.",
@@ -245,7 +245,7 @@
   },
   {
     "name": "National Pension System (NPS)",
-    "category": "Financial Services & Social Security",
+    "category": "Financial Services and Social Security",
     "description": "A voluntary, market-linked pension scheme providing retirement savings options with professional fund management and tax benefits.",
     "benefits": [
       "Tax deduction up to Rs. 1.5 lakh under Section 80C and additional Rs. 50,000 under 80CCD(1B).",
@@ -272,7 +272,7 @@
   },
   {
     "name": "Ladli Behna Yojana (Madhya Pradesh)",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "Madhya Pradesh state scheme providing direct financial assistance to women from economically weaker sections.",
     "benefits": [
       "Rs. 1,250 per month direct cash transfer to eligible women.",
@@ -284,7 +284,7 @@
   },
   {
     "name": "Karnataka Gruha Lakshmi Scheme",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "Karnataka state scheme providing monthly financial assistance to women heads of families as part of the Five Guarantees.",
     "benefits": [
       "Rs. 2,000 monthly cash assistance to women heads of families.",
@@ -296,7 +296,7 @@
   },
   {
     "name": "Yuva Nidhi Scheme (Karnataka)",
-    "category": "Employment & Entrepreneurship",
+    "category": "Employment and Entrepreneurship",
     "description": "Karnataka state scheme providing unemployment allowance to educated youth to support them during job search period.",
     "benefits": [
       "Rs. 3,000 per month for graduates.",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Shakti Scheme (Karnataka)",
-    "category": "Energy & Transport",
+    "category": "Energy and Transport",
     "description": "Karnataka state scheme providing free bus travel for women in state transport buses.",
     "benefits": [
       "Free travel in Karnataka State Road Transport Corporation (KSRTC) buses for women.",
@@ -333,7 +333,7 @@
   },
   {
     "name": "Lakshmir Bhandar (West Bengal)",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "West Bengal state scheme providing monthly financial assistance to women for economic empowerment.",
     "benefits": [
       "Rs. 1,000 per month for SC/ST women.",
@@ -346,7 +346,7 @@
   },
   {
     "name": "Kanyashree Prakalpa (West Bengal)",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "West Bengal state scheme encouraging girls' education and preventing child marriage through conditional cash transfers.",
     "benefits": [
       "Rs. 750 annual scholarship for girls in classes VIII-XII (K1).",
@@ -358,7 +358,7 @@
   },
   {
     "name": "Sabooj Sathi (West Bengal)",
-    "category": "Energy & Transport",
+    "category": "Energy and Transport",
     "description": "West Bengal state scheme providing free bicycles to students to improve school retention and access.",
     "benefits": [
       "Free bicycles to students of classes IX-XII.",
@@ -371,7 +371,7 @@
   },
   {
     "name": "Mukhyamantri Chiranjeevi Yojana (Rajasthan)",
-    "category": "Health, Sanitation & Nutrition",
+    "category": "Health, Sanitation and Nutrition",
     "description": "Rajasthan state health insurance scheme providing universal health coverage to all residents.",
     "benefits": [
       "Health coverage up to Rs. 25 lakh per family per year.",
@@ -397,7 +397,7 @@
   },
   {
     "name": "Kalaignar Magalir Urimai Thogai Scheme (Tamil Nadu)",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "Tamil Nadu state scheme providing monthly financial assistance to women heads of families.",
     "benefits": [
       "Rs. 1,000 per month to eligible women.",
@@ -410,7 +410,7 @@
   },
   {
     "name": "Chief Minister's Breakfast Scheme (Tamil Nadu)",
-    "category": "Health, Sanitation & Nutrition",
+    "category": "Health, Sanitation and Nutrition",
     "description": "Tamil Nadu state scheme providing nutritious breakfast to school children to improve enrollment and reduce malnutrition.",
     "benefits": [
       "Free nutritious breakfast to students in government schools.",
@@ -423,7 +423,7 @@
   },
   {
     "name": "Zero-Ticket Bus Travel Scheme for Women (Tamil Nadu)",
-    "category": "Energy & Transport",
+    "category": "Energy and Transport",
     "description": "Tamil Nadu state scheme providing free bus travel for women in state transport buses.",
     "benefits": [
       "Free travel in Tamil Nadu State Transport Corporation buses for women.",
@@ -436,7 +436,7 @@
   },
   {
     "name": "Vahli Dikri Yojana (Gujarat)",
-    "category": "Women & Child Welfare",
+    "category": "Women and Child Welfare",
     "description": "Gujarat state scheme providing financial assistance for education and welfare of girl children.",
     "benefits": [
       "Financial assistance for girl child education.",
@@ -449,7 +449,7 @@
   },
   {
     "name": "Mukhyamantri Kisan Sahay Yojana (Gujarat)",
-    "category": "Agriculture & Rural Welfare",
+    "category": "Agriculture and Rural Welfare",
     "description": "Gujarat state crop insurance scheme providing compensation to farmers for crop loss due to natural calamities.",
     "benefits": [
       "Compensation up to Rs. 20,000 per hectare for rain-fed crops.",
@@ -462,7 +462,7 @@
   },
   {
     "name": "Jal Jeevan Mission",
-    "category": "Housing & Infrastructure",
+    "category": "Housing and Infrastructure",
     "description": "Ensures piped water supply (Har Ghar Nal Se Jal) to all rural households by 2024.",
     "benefits": [
       "55 liters per person per day of potable water through individual household tap connections.",
@@ -475,7 +475,7 @@
   },
   {
     "name": "PM Surya Ghar Muft Bijli Yojana",
-    "category": "Energy & Transport",
+    "category": "Energy and Transport",
     "description": "Provides subsidized rooftop solar installations to generate free electricity for households.",
     "benefits": [
       "Up to 300 units of free electricity per month.",
@@ -488,7 +488,7 @@
   },
   {
     "name": "Unified Pension Scheme (UPS)",
-    "category": "Financial Services & Social Security",
+    "category": "Financial Services and Social Security",
     "description": "New pension scheme for central and state government employees providing assured pension benefits.",
     "benefits": [
       "Assured pension at 50% of average basic pay drawn over last 12 months of service.",
@@ -501,7 +501,7 @@
   },
   {
     "name": "National Education Policy (NEP) 2020 Implementation",
-    "category": "Education & Skill Development",
+    "category": "Education and Skill Development",
     "description": "Comprehensive reform of education system from school to higher education with focus on holistic development.",
     "benefits": [
       "Foundational Literacy and Numeracy (FLN) mission.",
