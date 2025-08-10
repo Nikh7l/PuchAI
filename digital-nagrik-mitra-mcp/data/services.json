@@ -1,0 +1,90 @@
+[
+    {
+      "name": "Passport",
+      "procedure": [
+        "Register on the Passport Seva Online Portal.",
+        "Log in and click 'Apply for Fresh Passport/Re-issue of Passport'.",
+        "Fill in the required details in the form and submit.",
+        "Click the 'Pay and Schedule Appointment' link to schedule an appointment.",
+        "Print the application receipt containing the Application Reference Number (ARN).",
+        "Visit the Passport Seva Kendra (PSK) on the date of your appointment with original documents."
+      ],
+      "documents_required": [
+        "Proof of Present Address (Aadhar Card, Voter ID, etc.)",
+        "Proof of Date of Birth (Birth Certificate, School Leaving Certificate, etc.)",
+        "Documentary proof for any one of the Non-ECR categories (if applicable)."
+      ],
+      "official_link": "https://passportindia.gov.in/"
+    },
+    {
+      "name": "PAN Card",
+      "procedure": [
+        "Visit the NSDL or UTIITSL portal.",
+        "Select the 'New PAN for Indian Citizens (Form 49A)' option.",
+        "Fill out the form with your personal details.",
+        "Make the payment online.",
+        "Upload scanned copies of your photograph, signature, and required documents.",
+        "Post the physical documents to the NSDL/UTIITSL office if required."
+      ],
+      "documents_required": [
+        "Proof of Identity (Aadhar Card, Voter ID, Driving License)",
+        "Proof of Address (Aadhar Card, Passport, Utility Bills)",
+        "Proof of Date of Birth (Birth Certificate, Passport, Matriculation Certificate)"
+      ],
+      "official_link": "https://www.onlineservices.nsdl.com/"
+    },
+    {
+      "name": "Aadhar Card",
+      "procedure": [
+        "Locate your nearest Aadhar enrolment center.",
+        "Fill the enrolment form available at the center.",
+        "Submit the form along with proof of identity and address documents.",
+        "Your biometric data (fingerprints and iris scan) will be captured.",
+        "You will receive an acknowledgement slip with an enrolment ID.",
+        "Your Aadhar card will be mailed to your address upon successful verification."
+      ],
+      "documents_required": [
+        "Proof of Identity (PAN Card, Passport, Voter ID)",
+        "Proof of Address (Passport, Bank Statement, Utility Bill)",
+        "Proof of Date of Birth (Birth Certificate, SSLC Certificate)",
+        "Proof of Relationship document (for family-based enrolment)"
+      ],
+      "official_link": "https://uidai.gov.in/"
+    },
+    {
+      "name": "Driving License",
+      "procedure": [
+        "Apply for a Learner's License online via the Parivahan portal.",
+        "Pay the fees and book a slot for the Learner's License test.",
+        "Pass the online test to get your Learner's License.",
+        "After 30 days, apply for a permanent Driving License.",
+        "Book a slot for the driving test.",
+        "Pass the driving test at the RTO to receive your permanent license."
+      ],
+      "documents_required": [
+        "Proof of Age (Birth Certificate, PAN Card, Passport)",
+        "Proof of Address (Aadhar Card, Voter ID, Ration Card)",
+        "Application Form No. 2 (Learner's) or No. 4 (Permanent)",
+        "Passport-sized photographs",
+        "Medical Certificate (Form 1A)"
+      ],
+      "official_link": "https://parivahan.gov.in/"
+    },
+    {
+      "name": "Voter ID",
+      "procedure": [
+        "Register on the National Voters' Services Portal (NVSP).",
+        "Fill out Form 6 for new registration.",
+        "Upload your photograph and proof of identity and address.",
+        "Submit the form.",
+        "A Booth Level Officer (BLO) will visit your address for verification.",
+        "Once verified, your Voter ID card will be issued."
+      ],
+      "documents_required": [
+        "One recent passport-size photograph",
+        "Proof of Identity (PAN Card, Driving License, Aadhar Card)",
+        "Proof of Address (Passport, Ration Card, Utility Bill)"
+      ],
+      "official_link": "https://www.eci.gov.in/"
+    }
+  ]

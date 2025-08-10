@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+    "category": "Health & Wellness",
+    "description": "Provides a health cover of Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization.",
+    "benefits": [
+      "Cashless access to health care services.",
+      "Covers 3 days of pre-hospitalization and 15 days post-hospitalization expenses.",
+      "No restriction on family size, age or gender."
+    ],
+    "eligibility_criteria": "Families identified as deprived rural families and identified occupational categories of urban workers' families as per the Socio-Economic Caste Census (SECC) 2011 data.",
+    "official_link": "https://pmjay.gov.in/"
+  },
+  {
+    "name": "Post-Matric Scholarship for Students with Disabilities",
+    "category": "Education & Learning",
+    "description": "Provides financial assistance to students with disabilities for post-matriculation courses enabling them to pursue higher education.",
+    "benefits": [
+      "Maintenance allowance.",
+      "Reimbursement of compulsory non-refundable fees.",
+      "Book allowance and other grants."
+    ],
+    "eligibility_criteria": "Students with 40% or more disability, studying in class 11th or above, with a parental annual income of less than Rs. 2.5 lakhs.",
+    "official_link": "https://scholarships.gov.in/"
+  },
+  {
+    "name": "Atal Pension Yojana",
+    "category": "Banking, Financial Services and Insurance",
+    "description": "A pension scheme mainly for the unorganized sector, providing a minimum guaranteed pension after the age of 60.",
+    "benefits": [
+      "Guaranteed minimum monthly pension of Rs. 1,000 to Rs. 5,000.",
+      "The same pension is paid to the spouse after the subscriber's death.",
+      "The nominee receives the pension corpus on the death of both."
+    ],
+    "eligibility_criteria": "Any Indian citizen between 18-40 years of age with a bank account. Should not be an income tax payer.",
+    "official_link": "https://www.npscra.nsdl.co.in/scheme-details.php"
+  }
+]
