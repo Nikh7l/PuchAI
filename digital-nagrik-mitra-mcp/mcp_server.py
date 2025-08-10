@@ -19,8 +19,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('nagrik_mitra.log')
+        logging.StreamHandler()  # Only log to console
     ]
 )
 logger = logging.getLogger('nagrik_mitra')
@@ -79,7 +78,10 @@ class SimpleBearerAuthProvider(BearerAuthProvider):
 def load_data(filename: str):
     """Load JSON data from the data directory with error handling."""
     try:
-        filepath = os.path.join("data", filename)
+        # Get the directory where the current script is located
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        # Build the path to the data file
+        filepath = os.path.join(script_dir, "data", filename)
         logger.debug(f"Loading data from {filepath}")
         with open(filepath, "r", encoding='utf-8') as f:
             data = json.load(f)
