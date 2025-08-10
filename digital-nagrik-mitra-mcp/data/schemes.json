@@ -1,7 +1,7 @@
 [
   {
     "name": "Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
-    "category": "Health & Wellness",
+    "category": "Health, Sanitation & Nutrition",
     "description": "Provides a health cover of Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization.",
     "benefits": [
       "Cashless access to health care services.",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Post-Matric Scholarship for Students with Disabilities",
-    "category": "Education & Learning",
+    "category": "Education & Skill Development",
     "description": "Provides financial assistance to students with disabilities for post-matriculation courses enabling them to pursue higher education.",
     "benefits": [
       "Maintenance allowance.",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Atal Pension Yojana",
-    "category": "Banking, Financial Services and Insurance",
+    "category": "Financial Services & Social Security",
     "description": "A pension scheme mainly for the unorganized sector, providing a minimum guaranteed pension after the age of 60.",
     "benefits": [
       "Guaranteed minimum monthly pension of Rs. 1,000 to Rs. 5,000.",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
-    "category": "Housing & Rural Development",
+    "category": "Housing & Infrastructure",
     "description": "Aims to provide pucca houses with basic amenities to all houseless households and households living in kutcha and dilapidated houses in rural areas.",
     "benefits": [
       "Assistance of Rs. 1.2 lakh in plain areas and Rs. 1.3 lakh in hilly areas.",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
-    "category": "Agriculture & Farmers Welfare",
+    "category": "Agriculture & Rural Welfare",
     "description": "Provides income support to all landholding farmer families in the country to supplement their financial needs.",
     "benefits": [
       "Rs. 6,000 per year in three equal installments directly into the farmer's bank account.",
@@ -60,7 +60,7 @@
   },
   {
     "name": "National Social Assistance Programme (NSAP)",
-    "category": "Social Welfare",
+    "category": "Financial Services & Social Security",
     "description": "Provides financial assistance to the elderly, widows, and persons with disabilities in the form of social pensions.",
     "benefits": [
       "Old Age Pension: Rs. 200-500 per month depending on age group.",
@@ -72,7 +72,7 @@
   },
   {
     "name": "Stand-Up India Scheme",
-    "category": "Entrepreneurship & Employment",
+    "category": "Employment & Entrepreneurship",
     "description": "Facilitates bank loans between Rs. 10 lakh and Rs. 1 crore to at least one Scheduled Caste (SC) or Scheduled Tribe (ST) borrower and at least one woman borrower per bank branch for setting up a greenfield enterprise.",
     "benefits": [
       "Composite loan (inclusive of term loan and working capital).",
@@ -84,7 +84,7 @@
   },
   {
     "name": "Ayushman Bharat Health and Wellness Centres (AB-HWCs)",
-    "category": "Health & Wellness",
+    "category": "Health, Sanitation & Nutrition",
     "description": "Transforms existing sub-health centres and primary health centres into health and wellness centres for comprehensive primary health care.",
     "benefits": [
       "Free essential drugs and diagnostic services.",
@@ -93,5 +93,423 @@
     ],
     "eligibility_criteria": "All citizens can avail services at these centres without any discrimination.",
     "official_link": "https://ab-hwc.nhp.gov.in/"
+  },
+  {
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "category": "Agriculture & Rural Welfare",
+    "description": "A crop insurance scheme providing comprehensive insurance coverage and financial support to farmers in case of crop failure due to natural calamities, pests, and diseases.",
+    "benefits": [
+      "Low premium rates—2% for Kharif, 1.5% for Rabi, up to 5% for commercial and horticultural crops.",
+      "Quick claim settlement and indemnity coverage for failed crops.",
+      "Access via notified insurance companies empanelled per state."
+    ],
+    "eligibility_criteria": "All farmers growing notified crops in notified areas; loanee farmers enrolled automatically through banks, others can voluntarily enroll.",
+    "official_link": "https://pmfby.gov.in/"
+  },
+  {
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "category": "Energy & Transport",
+    "description": "Empowers women from Below Poverty Line households by providing free LPG connections to reduce health hazards associated with traditional cooking fuels.",
+    "benefits": [
+      "Free LPG connection with financial support for deposit and installation.",
+      "Subsidized refills via Direct Benefit Transfer (DBT) into bank accounts.",
+      "Improved health outcomes by reducing indoor air pollution."
+    ],
+    "eligibility_criteria": "Women in BPL households without LPG connection; income limits and targeted via poverty line data.",
+    "official_link": "https://v2.india.gov.in/my-government/schemes-search?schemeName=Pradhan%20Mantri%20Ujjwala%20Yojana"
+  },
+  {
+    "name": "Pradhan Mantri Awas Yojana – Urban (PMAY-U)",
+    "category": "Housing & Infrastructure",
+    "description": "Enables affordable housing construction for urban poor via subsidies, credit-linked loans, and beneficiary-led construction or enhancement.",
+    "benefits": [
+      "Credit-linked subsidy up to 6.5% on home loans for EWS, LIG, MIG applicants.",
+      "In-situ slum rehabilitation using land as resource.",
+      "Affordable housing in partnership with private and public sectors."
+    ],
+    "eligibility_criteria": "Urban poor who are first-time homebuyers; family income limits apply per EWS/LIG/MIG categories.",
+    "official_link": "https://pmaymis.gov.in/"
+  },
+  {
+    "name": "Subhadra Yojana (Odisha)",
+    "category": "Women & Child Welfare",
+    "description": "Odisha state’s women-centric scheme providing direct financial support to economically weaker women aged 21–60 over five years.",
+    "benefits": [
+      "₹50,000 spread over five years via two ₹5,000 installments annually.",
+      "Disbursement through Aadhaar-linked bank accounts via DBT.",
+      "Incentives like additional ₹500 for beneficiaries with top digital transaction counts."
+    ],
+    "eligibility_criteria": "Women aged 21–60 years from economically weaker households; excludes government employees and those receiving other monthly scheme benefits.",
+    "official_link": "https://subhadra.odisha.gov.in/"
+  },
+  {
+    "name": "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)",
+    "category": "Employment & Entrepreneurship",
+    "description": "Enhances livelihood security in rural areas by providing at least 100 days of guaranteed wage employment in a financial year to every household whose adult members volunteer to do unskilled manual work.",
+    "benefits": [
+      "Guaranteed 100 days of wage employment at a stipulated minimum wage.",
+      "Creation of durable assets like roads, canals, and ponds in rural areas.",
+      "Social protection for the most vulnerable people living in rural India."
+    ],
+    "eligibility_criteria": "Every adult member of a rural household who is willing to do unskilled manual work and has applied for a Job Card.",
+    "official_link": "https://nrega.nic.in/"
+  },
+  {
+    "name": "Pradhan Mantri MUDRA Yojana (PMMY)",
+    "category": "Employment & Entrepreneurship",
+    "description": "Provides loans up to Rs. 10 lakh to non-corporate, non-farm small/micro-enterprises through various financial institutions.",
+    "benefits": [
+      "Access to formal credit for small businesses, often without collateral.",
+      "Loans categorized into 'Shishu' (up to ₹50,000), 'Kishor' (up to ₹5 Lakh), and 'Tarun' (up to ₹10 Lakh).",
+      "Promotes entrepreneurship at the grassroots level."
+    ],
+    "eligibility_criteria": "Any Indian citizen with a business plan for a non-farm sector income-generating activity like manufacturing, processing, trading, or services.",
+    "official_link": "https://www.mudra.org.in/"
+  },
+  {
+    "name": "Swachh Bharat Mission (SBM)",
+    "category": "Health, Sanitation & Nutrition",
+    "description": "A nationwide campaign to eliminate open defecation and improve solid waste management in urban and rural areas.",
+    "benefits": [
+      "Financial incentives for constructing individual household latrines (IHHL).",
+      "Focus on achieving an Open-Defecation Free (ODF) and clean India.",
+      "Promotes hygiene, scientific waste management, and sanitation."
+    ],
+    "eligibility_criteria": "All rural and urban households without access to toilets; urban local bodies and gram panchayats for community-level initiatives.",
+    "official_link": "https://swachhbharatmission.gov.in/"
+  },
+  {
+    "name": "National Health Mission (NHM)",
+    "category": "Health, Sanitation & Nutrition",
+    "description": "Encompasses two sub-missions (Rural and Urban) to provide accessible, affordable, and quality healthcare to all citizens, especially the vulnerable.",
+    "benefits": [
+      "Strengthening of public health infrastructure (Sub-Centres, PHCs, CHCs).",
+      "Focus on reducing Maternal and Infant Mortality Rates.",
+      "Provides free universal immunization services through Mission Indradhanush."
+    ],
+    "eligibility_criteria": "All citizens, with a special focus on rural populations, urban poor, women, and children.",
+    "official_link": "https://nhm.gov.in/"
+  },
+  {
+    "name": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+    "category": "Education & Skill Development",
+    "description": "A flagship skill certification scheme to enable a large number of Indian youth to take up industry-relevant skill training that will help them secure a better livelihood.",
+    "benefits": [
+      "Free short-duration skill training and certification based on National Skills Qualification Framework (NSQF).",
+      "Monetary reward and government certification upon successful assessment.",
+      "Improved employability and support for entrepreneurship."
+    ],
+    "eligibility_criteria": "Any Indian national who is an unemployed youth, or school/college dropout. Aadhar Card is mandatory.",
+    "official_link": "https://www.pmkvy.gov.in/"
+  },
+  {
+    "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+    "category": "Employment & Entrepreneurship",
+    "description": "Provides collateral-free working capital loans up to Rs. 10,000 (first tranche), Rs. 20,000 (second tranche), and Rs. 50,000 (third tranche) to street vendors to restart their businesses.",
+    "benefits": [
+      "Collateral-free loans up to Rs. 10,000 initially, then Rs. 20,000 and Rs. 50,000 in subsequent tranches.",
+      "7% interest subsidy from the government on regular repayment.",
+      "Cashback up to Rs. 1,200 per year on digital transactions.",
+      "No processing fee or penalty charges."
+    ],
+    "eligibility_criteria": "Street vendors who were vending as on or before March 24, 2020, in urban areas with valid Certificate of Vending/Identity Card or Letter of Recommendation from ULB/TVC.",
+    "official_link": "https://pmsvanidhi.mohua.gov.in/"
+  },
+  {
+    "name": "PM Vishwakarma Scheme",
+    "category": "Education & Skill Development",
+    "description": "Provides comprehensive support to traditional artisans and craftspeople engaged in 18 family-based traditional trades including training, credit, and modern tools.",
+    "benefits": [
+      "PM Vishwakarma Certificate & ID Card for recognition.",
+      "Basic training (40 hours) and advanced training (15 days) with Rs. 500/day stipend.",
+      "Toolkit incentive up to Rs. 15,000 via e-vouchers.",
+      "Collateral-free loans up to Rs. 1 lakh (first tranche) and Rs. 2 lakh (second tranche) at 5% interest.",
+      "Rs. 1 per digital transaction up to 100 transactions monthly."
+    ],
+    "eligibility_criteria": "Artisan or craftsperson above 18 years, working in one of 18 eligible trades, engaged in self-employment in unorganized sector. Only one member per family eligible.",
+    "official_link": "https://pmvishwakarma.gov.in/"
+  },
+  {
+    "name": "PM MITRA (Mega Integrated Textile Regions and Apparel) Parks",
+    "category": "Employment & Entrepreneurship",
+    "description": "Establishes integrated textile parks to create world-class industrial infrastructure for the textile industry, covering the entire value chain from spinning to garment manufacturing.",
+    "benefits": [
+      "Development capital support up to Rs. 500 crore per park.",
+      "Competitive incentive support up to Rs. 300 crore per park.",
+      "Integrated textile value chain at one location.",
+      "Expected to generate 1 lakh direct and 2 lakh indirect jobs per park.",
+      "Convergence with other government schemes."
+    ],
+    "eligibility_criteria": "Textile manufacturers and entrepreneurs setting up units in designated PM MITRA parks across 7 selected sites in Tamil Nadu, Telangana, Gujarat, Karnataka, Madhya Pradesh, Uttar Pradesh, and Maharashtra.",
+    "official_link": "https://texmin.nic.in/"
+  },
+  {
+    "name": "National Pension System (NPS)",
+    "category": "Financial Services & Social Security",
+    "description": "A voluntary, market-linked pension scheme providing retirement savings options with professional fund management and tax benefits.",
+    "benefits": [
+      "Tax deduction up to Rs. 1.5 lakh under Section 80C and additional Rs. 50,000 under 80CCD(1B).",
+      "Flexible investment options across equity, corporate bonds, government securities.",
+      "Low-cost investment product with transparent fund management.",
+      "Portability across jobs and locations.",
+      "Choice of fund managers and investment patterns."
+    ],
+    "eligibility_criteria": "Any Indian citizen (resident/non-resident/OCI) between 18-70 years of age. Aadhaar mandatory for registration.",
+    "official_link": "https://enps.nsdl.com/"
+  },
+  {
+    "name": "PM Garib Kalyan Anna Yojana (PM-GKAY)",
+    "category": "Food Security",
+    "description": "Provides free additional food grains to all National Food Security Act (NFSA) beneficiaries to address COVID-19 induced economic disruptions.",
+    "benefits": [
+      "5 kg free food grains (wheat/rice) per person per month.",
+      "1 kg free pulses per family per month.",
+      "Additional to regular NFSA allocations.",
+      "Covers approximately 80 crore beneficiaries."
+    ],
+    "eligibility_criteria": "All beneficiaries covered under National Food Security Act 2013 - Antyodaya Anna Yojana (AAY) and Priority Household (PHH) categories.",
+    "official_link": "https://dfpd.gov.in/"
+  },
+  {
+    "name": "Ladli Behna Yojana (Madhya Pradesh)",
+    "category": "Women & Child Welfare",
+    "description": "Madhya Pradesh state scheme providing direct financial assistance to women from economically weaker sections.",
+    "benefits": [
+      "Rs. 1,250 per month direct cash transfer to eligible women.",
+      "Disbursement through Direct Benefit Transfer (DBT) into bank accounts.",
+      "Aimed at women's economic empowerment and financial independence."
+    ],
+    "eligibility_criteria": "Women aged 21-60 years, from economically weaker sections, married/widowed/divorced/abandoned, with family annual income below Rs. 2.5 lakh.",
+    "official_link": "https://cmhelpline.mp.gov.in/"
+  },
+  {
+    "name": "Karnataka Gruha Lakshmi Scheme",
+    "category": "Women & Child Welfare",
+    "description": "Karnataka state scheme providing monthly financial assistance to women heads of families as part of the Five Guarantees.",
+    "benefits": [
+      "Rs. 2,000 monthly cash assistance to women heads of families.",
+      "Direct Benefit Transfer to bank accounts.",
+      "Part of Karnataka's Five Guarantees scheme."
+    ],
+    "eligibility_criteria": "Women heads of families residing in Karnataka, holding valid ration cards, with family annual income criteria as specified by the state government.",
+    "official_link": "https://sevasindhu.karnataka.gov.in/"
+  },
+  {
+    "name": "Yuva Nidhi Scheme (Karnataka)",
+    "category": "Employment & Entrepreneurship",
+    "description": "Karnataka state scheme providing unemployment allowance to educated youth to support them during job search period.",
+    "benefits": [
+      "Rs. 3,000 per month for graduates.",
+      "Rs. 1,500 per month for diploma holders.",
+      "Financial support for up to 2 years.",
+      "Skills development and placement support."
+    ],
+    "eligibility_criteria": "Karnataka residents aged 18-25 years with graduation/diploma, family annual income below Rs. 8 lakh, registered as unemployed.",
+    "official_link": "https://sevasindhu.karnataka.gov.in/"
+  },
+  {
+    "name": "Anna Bhagya Scheme (Karnataka)",
+    "category": "Food Security",
+    "description": "Karnataka state scheme providing additional free rice to BPL families beyond the central government allocation.",
+    "benefits": [
+      "Additional free rice allocation beyond NFSA entitlement.",
+      "Ensures food security for BPL families.",
+      "Distribution through Fair Price Shops (FPS)."
+    ],
+    "eligibility_criteria": "Families holding valid BPL ration cards in Karnataka state, as per state government criteria.",
+    "official_link": "https://ahara.karnataka.gov.in/"
+  },
+  {
+    "name": "Shakti Scheme (Karnataka)",
+    "category": "Energy & Transport",
+    "description": "Karnataka state scheme providing free bus travel for women in state transport buses.",
+    "benefits": [
+      "Free travel in Karnataka State Road Transport Corporation (KSRTC) buses for women.",
+      "Covers all ordinary and express services within Karnataka.",
+      "No income or age restrictions."
+    ],
+    "eligibility_criteria": "All women residents of Karnataka state, no specific income or age criteria.",
+    "official_link": "https://ksrtc.in/"
+  },
+  {
+    "name": "Lakshmir Bhandar (West Bengal)",
+    "category": "Women & Child Welfare",
+    "description": "West Bengal state scheme providing monthly financial assistance to women for economic empowerment.",
+    "benefits": [
+      "Rs. 1,000 per month for SC/ST women.",
+      "Rs. 500 per month for general category women.",
+      "Direct bank transfer to women beneficiaries.",
+      "Aims to improve women's financial condition."
+    ],
+    "eligibility_criteria": "Women aged 18-60 years, head of family, holding valid voter ID and Aadhaar card, residing in West Bengal.",
+    "official_link": "https://wb.gov.in/"
+  },
+  {
+    "name": "Kanyashree Prakalpa (West Bengal)",
+    "category": "Women & Child Welfare",
+    "description": "West Bengal state scheme encouraging girls' education and preventing child marriage through conditional cash transfers.",
+    "benefits": [
+      "Rs. 750 annual scholarship for girls in classes VIII-XII (K1).",
+      "Rs. 25,000 one-time grant for unmarried girls aged 18 and pursuing higher education/technical training (K2).",
+      "Encourages girls to stay in school and delay marriage."
+    ],
+    "eligibility_criteria": "Girls studying in classes VIII-XII (K1) or unmarried girls aged 18 pursuing higher studies (K2), with family income below Rs. 1.2 lakh annually.",
+    "official_link": "https://wb.gov.in/"
+  },
+  {
+    "name": "Sabooj Sathi (West Bengal)",
+    "category": "Energy & Transport",
+    "description": "West Bengal state scheme providing free bicycles to students to improve school retention and access.",
+    "benefits": [
+      "Free bicycles to students of classes IX-XII.",
+      "Promotes eco-friendly transportation.",
+      "Encourages continued education, especially for girls.",
+      "Improves school attendance and reduces dropout rates."
+    ],
+    "eligibility_criteria": "Students studying in classes IX-XII in government and government-aided schools in West Bengal.",
+    "official_link": "https://wb.gov.in/"
+  },
+  {
+    "name": "Mukhyamantri Chiranjeevi Yojana (Rajasthan)",
+    "category": "Health, Sanitation & Nutrition",
+    "description": "Rajasthan state health insurance scheme providing universal health coverage to all residents.",
+    "benefits": [
+      "Health coverage up to Rs. 25 lakh per family per year.",
+      "Covers both government and private hospitals.",
+      "Additional Rs. 10 lakh for accidental coverage.",
+      "Cashless treatment facility."
+    ],
+    "eligibility_criteria": "All residents of Rajasthan, universal coverage without income restrictions.",
+    "official_link": "https://chiranjeevi.rajasthan.gov.in/"
+  },
+  {
+    "name": "Indira Rasoi Yojana (Rajasthan)",
+    "category": "Food Security",
+    "description": "Rajasthan state scheme providing subsidized meals to ensure food security for urban poor.",
+    "benefits": [
+      "Full meal at Rs. 8 and half meal at Rs. 5.",
+      "Breakfast available at Rs. 5.",
+      "Nutritious meals prepared under hygienic conditions.",
+      "Covers urban areas across Rajasthan."
+    ],
+    "eligibility_criteria": "Available to all citizens, with special focus on urban poor, laborers, and economically weaker sections.",
+    "official_link": "https://food.raj.nic.in/"
+  },
+  {
+    "name": "Kalaignar Magalir Urimai Thogai Scheme (Tamil Nadu)",
+    "category": "Women & Child Welfare",
+    "description": "Tamil Nadu state scheme providing monthly financial assistance to women heads of families.",
+    "benefits": [
+      "Rs. 1,000 per month to eligible women.",
+      "Direct Benefit Transfer to bank accounts.",
+      "Supports women's economic independence.",
+      "Covers various categories of women beneficiaries."
+    ],
+    "eligibility_criteria": "Women heads of families in Tamil Nadu, with specific income and residency criteria as defined by the state government.",
+    "official_link": "https://tn.gov.in/"
+  },
+  {
+    "name": "Chief Minister's Breakfast Scheme (Tamil Nadu)",
+    "category": "Health, Sanitation & Nutrition",
+    "description": "Tamil Nadu state scheme providing nutritious breakfast to school children to improve enrollment and reduce malnutrition.",
+    "benefits": [
+      "Free nutritious breakfast to students in government schools.",
+      "Covers classes I-V initially, expanded to higher classes.",
+      "Improves school attendance and learning outcomes.",
+      "Addresses malnutrition among children."
+    ],
+    "eligibility_criteria": "Students enrolled in Tamil Nadu government and government-aided schools from classes I-V (expanded to higher classes).",
+    "official_link": "https://www.tn.gov.in/"
+  },
+  {
+    "name": "Zero-Ticket Bus Travel Scheme for Women (Tamil Nadu)",
+    "category": "Energy & Transport",
+    "description": "Tamil Nadu state scheme providing free bus travel for women in state transport buses.",
+    "benefits": [
+      "Free travel in Tamil Nadu State Transport Corporation buses for women.",
+      "Covers all routes within Tamil Nadu.",
+      "No income or age restrictions.",
+      "Promotes women's mobility and empowerment."
+    ],
+    "eligibility_criteria": "All women, no specific eligibility criteria based on income or other factors.",
+    "official_link": "https://www.tnstc.in/"
+  },
+  {
+    "name": "Vahli Dikri Yojana (Gujarat)",
+    "category": "Women & Child Welfare",
+    "description": "Gujarat state scheme providing financial assistance for education and welfare of girl children.",
+    "benefits": [
+      "Financial assistance for girl child education.",
+      "Rs. 4,000 at birth, Rs. 6,000 at 1st standard admission.",
+      "Rs. 6,000 at 9th standard admission, Rs. 1 lakh at 18 years for higher education.",
+      "Promotes girl child education and prevents female foeticide."
+    ],
+    "eligibility_criteria": "Girl children born in Gujarat families with annual income below Rs. 2 lakh, maximum two girl children per family eligible.",
+    "official_link": "https://cmogujarat.gov.in/"
+  },
+  {
+    "name": "Mukhyamantri Kisan Sahay Yojana (Gujarat)",
+    "category": "Agriculture & Rural Welfare",
+    "description": "Gujarat state crop insurance scheme providing compensation to farmers for crop loss due to natural calamities.",
+    "benefits": [
+      "Compensation up to Rs. 20,000 per hectare for rain-fed crops.",
+      "Rs. 25,000 per hectare for irrigated crops.",
+      "Coverage for damage above 33% of normal yield.",
+      "No premium to be paid by farmers."
+    ],
+    "eligibility_criteria": "All farmers in Gujarat growing notified crops, automatic coverage without premium payment by farmers.",
+    "official_link": "https://ikhedut.gujarat.gov.in/"
+  },
+  {
+    "name": "Jal Jeevan Mission",
+    "category": "Housing & Infrastructure",
+    "description": "Ensures piped water supply (Har Ghar Nal Se Jal) to all rural households by 2024.",
+    "benefits": [
+      "55 liters per person per day of potable water through individual household tap connections.",
+      "Improved water quality and reliability.",
+      "Community participation in water resource management.",
+      "Integration with other government schemes."
+    ],
+    "eligibility_criteria": "All rural households across India, with priority to water-stressed and drought-prone areas.",
+    "official_link": "https://jaljeevanmission.gov.in/"
+  },
+  {
+    "name": "PM Surya Ghar Muft Bijli Yojana",
+    "category": "Energy & Transport",
+    "description": "Provides subsidized rooftop solar installations to generate free electricity for households.",
+    "benefits": [
+      "Up to 300 units of free electricity per month.",
+      "Central subsidy up to Rs. 78,000 for systems up to 3kW.",
+      "Easy financing through subsidized loans.",
+      "Reduce electricity bills and carbon footprint."
+    ],
+    "eligibility_criteria": "All residential consumers across India, with Aadhaar and electricity connection mandatory.",
+    "official_link": "https://pmsuryaghar.gov.in/"
+  },
+  {
+    "name": "Unified Pension Scheme (UPS)",
+    "category": "Financial Services & Social Security",
+    "description": "New pension scheme for central and state government employees providing assured pension benefits.",
+    "benefits": [
+      "Assured pension at 50% of average basic pay drawn over last 12 months of service.",
+      "Assured family pension at 60% of employee's pension.",
+      "Assured minimum pension of Rs. 10,000 per month.",
+      "Inflation indexation of pension."
+    ],
+    "eligibility_criteria": "Central and state government employees joining service from April 1, 2025, onwards.",
+    "official_link": "https://doppw.gov.in/"
+  },
+  {
+    "name": "National Education Policy (NEP) 2020 Implementation",
+    "category": "Education & Skill Development",
+    "description": "Comprehensive reform of education system from school to higher education with focus on holistic development.",
+    "benefits": [
+      "Foundational Literacy and Numeracy (FLN) mission.",
+      "Multiple entry and exit options in higher education.",
+      "Academic Bank of Credits for credit transfer.",
+      "Integration of vocational education from Grade 6."
+    ],
+    "eligibility_criteria": "All students in Indian education system from pre-primary to higher education levels.",
+    "official_link": "https://www.education.gov.in/"
   }
 ]

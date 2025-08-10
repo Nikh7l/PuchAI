@@ -208,14 +208,22 @@ async def yojana(category: Annotated[Optional[str], Field(description='The categ
 
         response = f"📚 *Schemes in {category}:*\n\n"
         for scheme in category_schemes:
-            response += f"🔹 *{scheme.get('name', 'Unnamed Scheme')}*\n"
+            response += f"🔹 *{scheme.get('name', 'Unnamed Scheme')}*\n\n"
             if 'description' in scheme:
-                response += f"{scheme['description']}\n"
+                response += f"📝 *Description:* {scheme['description']}\n\n"
+            if 'eligibility_criteria' in scheme:
+                response += f"✅ *Eligibility Criteria:* {scheme['eligibility_criteria']}\n\n"
+            if 'benefits' in scheme and isinstance(scheme['benefits'], list):
+                response += "💡 *Key Benefits:*\n"
+                for benefit in scheme['benefits']:
+                    response += f"  • {benefit}\n"
+                response += "\n"
+                
             if 'official_link' in scheme:
-                response += f"🔗 {scheme['official_link']}\n"
-            response += "\n"
+                response += f"🔗 *Official Link:* {scheme['official_link']}\n"
+            response += "\n" + "-"*30 + "\n\n"
             
-        response += "\n*(Eligibility checker coming soon!)*"
+        response = response.rstrip("\n" + "-"*30 + "\n\n") + "\n\n*Need more details?* Ask me about any scheme!"
         logger.info(f"Successfully generated response for category: {category}")
         return response
         
