@@ -2,89 +2,138 @@
     {
       "name": "Passport",
       "procedure": [
-        "Register on the Passport Seva Online Portal.",
-        "Log in and click 'Apply for Fresh Passport/Re-issue of Passport'.",
-        "Fill in the required details in the form and submit.",
-        "Click the 'Pay and Schedule Appointment' link to schedule an appointment.",
-        "Print the application receipt containing the Application Reference Number (ARN).",
-        "Visit the Passport Seva Kendra (PSK) on the date of your appointment with original documents."
+        "Register on the Passport Seva Online Portal at https://passportindia.gov.in/",
+        "Log in and click 'Apply for Fresh Passport/Re-issue of Passport'",
+        "Fill in the required details in Form 1 for fresh passport application",
+        "Upload scanned copies of required documents (photograph, signature, and supporting documents)",
+        "Click the 'Pay and Schedule Appointment' link to pay fees online and schedule an appointment at Passport Seva Kendra (PSK)",
+        "Print the application receipt containing the Application Reference Number (ARN)",
+        "Visit the Passport Seva Kendra (PSK) on the date of your appointment with original documents and fee receipt for biometric data capture and document verification"
       ],
       "documents_required": [
-        "Proof of Present Address (Aadhar Card, Voter ID, etc.)",
-        "Proof of Date of Birth (Birth Certificate, School Leaving Certificate, etc.)",
-        "Documentary proof for any one of the Non-ECR categories (if applicable)."
+        "Proof of Identity: Aadhaar Card, Voter ID, PAN Card, Driving License, or other government-issued photo ID",
+        "Proof of Present Address: Aadhaar Card, Voter ID, Utility Bills (electricity/gas/water), Bank Statement, or Rental Agreement (not older than 3 months)",
+        "Proof of Date of Birth: Birth Certificate issued by Municipal Authority/Registrar of Births & Deaths, School Leaving Certificate, Aadhaar Card, or PAN Card",
+        "For applicants born after 26th January 1989: Birth Certificate is mandatory",
+        "Recent passport-sized photographs with white background (2 copies)",
+        "Self-attested photocopies of all original documents"
       ],
+      "fees": {
+        "Fresh Passport (36 pages)": "₹1,500",
+        "Fresh Passport (60 pages)": "₹2,000",
+        "Tatkal Service": "Additional ₹2,000 for 36 pages, ₹3,500 for 60 pages"
+      },
       "official_link": "https://passportindia.gov.in/"
     },
     {
       "name": "PAN Card",
       "procedure": [
-        "Visit the NSDL or UTIITSL portal.",
-        "Select the 'New PAN for Indian Citizens (Form 49A)' option.",
-        "Fill out the form with your personal details.",
-        "Make the payment online.",
-        "Upload scanned copies of your photograph, signature, and required documents.",
-        "Post the physical documents to the NSDL/UTIITSL office if required."
+        "Visit the official Income Tax e-filing portal at https://www.incometax.gov.in/ for instant e-PAN (free for eligible applicants) OR visit NSDL portal at https://tin.tin.nsdl.com/pan/ or UTIITSL portal at https://www.pan.utiitsl.com/",
+        "For instant e-PAN: Click on 'Instant e-PAN' and enter Aadhaar number for OTP-based verification",
+        "For regular PAN: Select 'New PAN for Indian Citizens (Form 49A)' option",
+        "Fill out the application form with personal details including name, date of birth, address, and contact information",
+        "Select document submission mode: Paperless (Aadhaar e-KYC), Digital upload, or Physical submission",
+        "Upload scanned copies of required documents and photograph",
+        "Make online payment through credit/debit card, net banking, or demand draft",
+        "Download and print the acknowledgment receipt with 15-digit acknowledgment number",
+        "For physical submission: Send documents to NSDL/UTIITSL office within 15 days"
       ],
       "documents_required": [
-        "Proof of Identity (Aadhar Card, Voter ID, Driving License)",
-        "Proof of Address (Aadhar Card, Passport, Utility Bills)",
-        "Proof of Date of Birth (Birth Certificate, Passport, Matriculation Certificate)"
+        "Proof of Identity: Aadhaar Card, Voter ID, Passport, Driving License, or Government-issued photo ID",
+        "Proof of Address: Aadhaar Card, Passport, Utility Bills (electricity/telephone/water), Bank Statement, or Rental Agreement",
+        "Proof of Date of Birth: Birth Certificate, Aadhaar Card, Passport, Matriculation Certificate, or School Leaving Certificate",
+        "Recent passport-sized color photograph with white background",
+        "For Instant e-PAN: Valid Aadhaar with linked mobile number (mandatory)"
       ],
-      "official_link": "https://www.onlineservices.nsdl.com/"
+      "fees": {
+        "Instant e-PAN": "Free",
+        "Online application (paperless mode)": "₹101 (excluding GST)",
+        "Physical document submission": "₹107 (excluding GST)",
+        "Foreign address": "₹1,017 (excluding GST)"
+      },
+      "official_link": "https://www.incometax.gov.in/"
     },
     {
-      "name": "Aadhar Card",
+      "name": "Aadhaar Card",
       "procedure": [
-        "Locate your nearest Aadhar enrolment center.",
-        "Fill the enrolment form available at the center.",
-        "Submit the form along with proof of identity and address documents.",
-        "Your biometric data (fingerprints and iris scan) will be captured.",
-        "You will receive an acknowledgement slip with an enrolment ID.",
-        "Your Aadhar card will be mailed to your address upon successful verification."
+        "Locate your nearest Aadhaar Enrolment Center using https://appointments.uidai.gov.in/ or visit any authorized center",
+        "Carry original documents for identity, address, and date of birth proof",
+        "Fill the Aadhaar enrolment form (available at the center) with personal details",
+        "Submit the form along with original documents for verification by the operator",
+        "Provide biometric data: 10 fingerprints, iris scan of both eyes, and facial photograph",
+        "Review the captured information and make corrections if needed during enrolment",
+        "Collect the acknowledgment slip containing the 14-digit Enrolment ID (EID)",
+        "Your Aadhaar card will be mailed to your registered address within 60-90 days, or download e-Aadhaar from https://myaadhaar.uidai.gov.in/"
       ],
       "documents_required": [
-        "Proof of Identity (PAN Card, Passport, Voter ID)",
-        "Proof of Address (Passport, Bank Statement, Utility Bill)",
-        "Proof of Date of Birth (Birth Certificate, SSLC Certificate)",
-        "Proof of Relationship document (for family-based enrolment)"
+        "Proof of Identity (any one): Passport, PAN Card, Voter ID, Driving License, Ration Card with photograph, or Government-issued photo ID",
+        "Proof of Address (any one): Passport, Voter ID, Ration Card, Bank Statement, Utility Bills (electricity/water/gas/telephone - not older than 3 months), or Rental Agreement",
+        "Proof of Date of Birth (any one): Birth Certificate, Passport, PAN Card, School Leaving Certificate/SSLC, or Matriculation Certificate",
+        "For children: Birth Certificate is mandatory if born after 1st October 2023",
+        "For Head of Family (HoF) based enrolment: Relationship proof documents if individual lacks required documents"
       ],
+      "fees": {
+        "New Aadhaar Enrolment": "Free",
+        "Biometric Update (age 5-7 or 15-17)": "Free (once)",
+        "Demographic Update": "₹50",
+        "Document Update": "₹50"
+      },
       "official_link": "https://uidai.gov.in/"
     },
     {
       "name": "Driving License",
       "procedure": [
-        "Apply for a Learner's License online via the Parivahan portal.",
-        "Pay the fees and book a slot for the Learner's License test.",
-        "Pass the online test to get your Learner's License.",
-        "After 30 days, apply for a permanent Driving License.",
-        "Book a slot for the driving test.",
-        "Pass the driving test at the RTO to receive your permanent license."
+        "Apply for Learner's License online at https://sarathi.parivahan.gov.in/ by selecting your state and filling Form 2",
+        "Upload required documents and pay the LL fee online",
+        "Take the online/offline test on traffic rules and road signs at RTO",
+        "After passing the test, collect your Learner's License (valid for 6 months)",
+        "Wait for mandatory 30 days after getting LL before applying for permanent DL",
+        "Apply for permanent Driving License online using Form 4 on the same portal",
+        "Upload documents and pay DL fees online",
+        "Book a slot for practical driving test at RTO",
+        "Visit RTO on scheduled date with original documents and LL for driving test",
+        "Pass the practical driving test conducted by RTO officials to receive permanent DL"
       ],
       "documents_required": [
-        "Proof of Age (Birth Certificate, PAN Card, Passport)",
-        "Proof of Address (Aadhar Card, Voter ID, Ration Card)",
-        "Application Form No. 2 (Learner's) or No. 4 (Permanent)",
-        "Passport-sized photographs",
-        "Medical Certificate (Form 1A)"
+        "Proof of Age (any one): Birth Certificate, PAN Card, Passport, School Leaving Certificate/10th Marksheet with DOB, or Aadhaar Card",
+        "Proof of Address (any one): Aadhaar Card, Voter ID, Ration Card, Passport, Utility Bills (electricity/water/gas), or Bank Statement",
+        "Form 2 (for Learner's License) and Form 4 (for permanent DL) - filled online or offline",
+        "Recent passport-sized photographs (3-6 copies)",
+        "Medical Certificate (Form 1A) - mandatory for transport vehicles and applicants above 40 years",
+        "Learner's License (mandatory when applying for permanent DL)",
+        "Driving School Certificate (if applicable)"
       ],
+      "fees": {
+        "Learner's License": "₹150-200 per vehicle class + Test fee ₹50",
+        "Permanent Driving License": "₹200 for smart card + Test fee ₹50",
+        "License Renewal": "₹200-400 (varies by state)"
+      },
       "official_link": "https://parivahan.gov.in/"
     },
     {
       "name": "Voter ID",
       "procedure": [
-        "Register on the National Voters' Services Portal (NVSP).",
-        "Fill out Form 6 for new registration.",
-        "Upload your photograph and proof of identity and address.",
-        "Submit the form.",
-        "A Booth Level Officer (BLO) will visit your address for verification.",
-        "Once verified, your Voter ID card will be issued."
+        "Visit the Voters' Services Portal at https://voters.eci.gov.in/ or your state's Chief Electoral Officer website",
+        "Register as a new user with mobile number and email ID, or login if already registered",
+        "Fill out Form 6 (Application for inclusion of name in electoral roll) with personal details",
+        "Upload recent passport-sized color photograph with white background",
+        "Upload scanned copies of required documents for identity, address, and age proof",
+        "Submit the online application and note down the reference number for tracking",
+        "A Booth Level Officer (BLO) will visit your address for field verification within 15-30 days",
+        "Once verified and approved, your Voter ID card will be dispatched to your registered address",
+        "Download e-EPIC (electronic voter ID) from the portal after approval"
       ],
       "documents_required": [
-        "One recent passport-size photograph",
-        "Proof of Identity (PAN Card, Driving License, Aadhar Card)",
-        "Proof of Address (Passport, Ration Card, Utility Bill)"
+        "Proof of Identity (any one): Aadhaar Card, PAN Card, Passport, Driving License, Ration Card with photo, or Bank Passbook with photo",
+        "Proof of Address (any one): Aadhaar Card, Passport, Driving License, Utility Bills (electricity/water/gas/telephone), Bank Statement, or Rental Agreement",
+        "Proof of Age (any one): Birth Certificate, Aadhaar Card, PAN Card, Passport, 10th Standard Marksheet/Certificate, or School Leaving Certificate",
+        "Recent passport-sized color photograph with white background",
+        "Self-attested photocopies of all supporting documents",
+        "eligibility : Minimum Age: 18 years on or before qualifying date, Citizenship: Indian citizen, Residency: Ordinarily resident of the constituency where applying"
       ],
+      "fees": {
+        "Application Fee": "Free"
+      },
       "official_link": "https://www.eci.gov.in/"
     }
   ]

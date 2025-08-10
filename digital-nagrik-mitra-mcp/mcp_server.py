@@ -117,12 +117,12 @@ async def validate() -> str:
 # --- Tool: /seva ---
 @mcp.tool
 @log_errors
-async def seva(service_name: Annotated[str, Field(description='The name of the government service you need information about. e.g., \"Passport\", \"PAN Card\"')]) -> str:
+async def seva(service_name: Annotated[str, Field(description='The name of the government service you need information about. e.g., "Passport", "PAN Card"')]) -> str:
     """
     Provides step-by-step guides for various Indian government services.
     
     Args:
-        service_name: Name of the government service (e.g., "Passport", "PAN Card")
+        service_name: Name of the service to get information about (e.g., "Passport", "PAN Card")
         
     Returns:
         str: Formatted guide for the requested service
@@ -130,8 +130,13 @@ async def seva(service_name: Annotated[str, Field(description='The name of the g
     logger.info(f"Processing request for service: {service_name}")
     
     try:
-        services = load_data("services.json")
-        logger.debug(f"Loaded {len(services)} services from data")
+        # First try to load from services1.json, fallback to services.json if not found
+        try:
+            services = load_data("services.json")
+            logger.debug(f"Loaded {len(services)} services from services1.json")
+        except FileNotFoundError:
+            services = load_data("services.json")
+            logger.debug(f"Loaded {len(services)} services from services.json")
         
         service_info = next((s for s in services if s['name'].lower() == service_name.lower()), None)
 
@@ -144,6 +149,14 @@ async def seva(service_name: Annotated[str, Field(description='The name of the g
         logger.info(f"Found service: {service_info['name']}")
         
         response = f"📜 *Guide for {service_info['name']}*\n\n"
+        
+        # Add fees information if available (new schema)
+        if 'fees' in service_info and isinstance(service_info['fees'], dict):
+            response += "💰 *Fees:*\n"
+            for fee_type, amount in service_info['fees'].items():
+                response += f"- *{fee_type}:* {amount}\n"
+            response += "\n"
+        
         response += "📝 *Procedure:*\n"
         for i, step in enumerate(service_info.get('procedure', []), 1):
             response += f"{i}. {step}\n"
@@ -155,6 +168,8 @@ async def seva(service_name: Annotated[str, Field(description='The name of the g
         
         if 'official_link' in service_info and service_info['official_link']:
             response += f"\n🔗 *Official Link:* {service_info['official_link']}"
+        
+        response += "\n\n🔄 *Need more help?* Ask me about any step!"
         
         logger.debug(f"Successfully generated response for {service_name}")
         return response
