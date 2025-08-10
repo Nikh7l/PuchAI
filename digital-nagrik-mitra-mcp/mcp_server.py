@@ -181,15 +181,57 @@ async def seva(service_name: Annotated[str, Field(description='The name of the g
 # --- Tool: /yojana ---
 @mcp.tool
 @log_errors
-async def yojana(category: Annotated[Optional[str], Field(description='The category of scheme you are interested in. e.g., \"Education\", \"Health\"')]) -> str:
+async def yojana(category: Annotated[str, Field(description="""
+        Category of the scheme. Available categories are:
+        - Agriculture and Rural Welfare: For farming, irrigation, and rural development schemes.
+        - Education and Skill Development: For school, college, and skill training programs.
+        - Employment and Entrepreneurship: For job creation, self-employment, and business support.
+        - Energy and Transport: For LPG, electricity, public transport, and vehicle-related schemes.
+        - Financial Services and Social Security: For pensions, insurance, and financial inclusion.
+        - Food Security: For food distribution and nutrition programs like PDS, mid-day meals, etc.
+        - Health, Sanitation and Nutrition: For healthcare, sanitation, and nutrition programs.
+        - Housing and Infrastructure: For housing, water supply, and urban/rural infrastructure.
+        - Women and Child Welfare: For women's empowerment and child development schemes.
+        
+        Examples:
+        - For LPG connections: Use 'Energy and Transport'
+        - For women entrepreneurs: Use 'Employment and Entrepreneurship'
+        - For women-specific schemes: Use 'Women and Child Welfare'
+        - For farming support: Use 'Agriculture and Rural Welfare'
+        - For health insurance: Use 'Health, Sanitation and Nutrition'
+        
+        If unsure about the category, you can first call without any category to see all available options.
+    """)] = '') -> str:
     """
-    Helps you find and check eligibility for Indian government schemes.
+    Provides information about various Indian government schemes and yojanas.
+    
+    This tool helps users discover and understand government schemes across different categories.
+    It can list all available scheme categories or provide details about schemes in a specific category.
+    
+    When to use which category:
+    - For farming, crops, or rural development → 'Agriculture and Rural Welfare'
+    - For schools, colleges, or skill training → 'Education and Skill Development'
+    - For jobs, self-employment, or business support → 'Employment and Entrepreneurship'
+    - For LPG, electricity, or transport → 'Energy and Transport'
+    - For food rations, PDS, or nutrition support → 'Food Security'
+    - For pensions, insurance, or banking → 'Financial Services and Social Security'
+    - For food distribution or nutrition → 'Food Security'
+    - For healthcare, sanitation, or nutrition → 'Health, Sanitation and Nutrition'
+    - For housing, water supply, or infrastructure → 'Housing and Infrastructure'
+    - For women's empowerment or child development → 'Women and Child Welfare'
+    
+    Examples:
+    - User asks about LPG connections → Check 'Energy and Transport' category
+    - User is a woman looking for transport benefits → Check 'Energy and Transport' category
+    - User asks about women entrepreneurs → Check 'Employment and Entrepreneurship' category
+    - User asks about women-specific schemes → Check 'Women and Child Welfare' category
+    - User mentions farming or rural support → Check 'Agriculture and Rural Welfare' category
     
     Args:
-        category: Category of schemes to list (optional)
+        category: The category of schemes to list. If empty, lists all available categories.
         
     Returns:
-        str: List of schemes in the specified category or all categories if none specified
+        str: Information about schemes in the specified category, or a list of all categories if none specified.
     """
     logger.info(f"Processing yojana request for category: {category or 'all'}")
     
